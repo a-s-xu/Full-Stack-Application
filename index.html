@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<!---------
+  MADE
+  BY YEAH
+  ALEXANDER
+  XU
+  --->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/6e4058d9a8.js" crossorigin="anonymous"></script>
+  
+</head>
+
+<body>
+
+  <!---------------------------- Sidebar and Header Start -------------------------->
+  <div class="breakAbsolute"></div>
+  <div id="sideID" class="sideClass">
+    <div class="closebutton" onclick="closeNav()"> <p id="closeIcon">×</p></div>
+    <h1 class = "currentPage"> Home Page </h1>
+    <a href="GPU.html">Graphics Processing Units</a>
+    <a href="CPU.html">Central Processing Units</a>
+    <a href="PSU.html">Power Supply Units</a>
+    <a href="OC.html">Optimal Combinations</a>
+    <a href="WT.html">Database</a>
+  </div>
+
+  <div id="containerID">
+    <button class="openbutton" onclick="openNav()">☰ Navigation</button>  
+  </div>
+   <div class="break"></div>
+  <!------------------------ Sidebar and Header End ------------------------------------->
+
+
+
+
+
+  <!-- Slideshow -->
+    <div class="slideshowCont">
+
+      <div class="SlidesPG fadeOutIn">
+        <div class="slidesCount">1 / 6</div>
+        <img class="slideshowImg" src="HomepageSlideshow/cpu.jpg" style="width:100%">
+        <div class="captionText">Intel and Ryzen</div>
+      </div>
+
+      <div class="SlidesPG fadeOutIn">
+        <div class="slidesCount">2 / 6</div>
+        <img class="slideshowImg" src="HomepageSlideshow/gpu3.jpg" style="width:100%">
+        <div class="captionText">Adrus GPU</div>
+      </div>
+
+      <div class="SlidesPG fadeOutIn">
+        <div class="slidesCount">3 / 6</div>
+        <img class="slideshowImg" src="HomepageSlideshow/Psu.jpg" style="width:100%">
+        <div class="captionText">Power Supply Internals</div>
+      </div>
+
+      <div class="SlidesPG fadeOutIn">
+        <div class="slidesCount">4 / 6</div>
+        <img class="slideshowImg" src="HomepageSlideshow/cpu2.jpg" style="width:100%">
+        <div class="captionText">Backside of an Intel Cpu</div>
+      </div>
+
+      <div class="SlidesPG fadeOutIn">
+        <div class="slidesCount">5 / 6</div>
+        <img class="slideshowImg" src="HomepageSlideshow/gpu2.jpg" style="width:100%">
+        <div class="captionText">Asus TUF 4060ti</div>
+      </div>
+
+      <div class="SlidesPG fadeOutIn">
+        <div class="slidesCount">6 / 6</div>
+        <img class="slideshowImg" src="HomepageSlideshow/psu4.jpg" style="width:100%">
+        <div class="captionText">Power Supply Unit</div>
+      </div>
+
+    </div>
+
+  <div class="break">
+    <div style="text-align:center">
+      <span class="dotIndicator"></span> 
+      <span class="dotIndicator"></span> 
+      <span class="dotIndicator"></span> 
+      <span class="dotIndicator"></span> 
+      <span class="dotIndicator"></span> 
+      <span class="dotIndicator"></span> 
+    </div>
+  </div>
+
+<!-- Slideshow End -->
+<br>
+<br>
+<br>
+<!-- Overview -->
+  <div class="fillerContainer">
+    <div class="containerRounded" id="containerMargin"> 
+      <p class= generalizedHeader> Overview: The FAQ's </p>
+    <hr>
+      <p class="generalizedBody"> This website serves to introduce the user to the realm of computer components, namely the three most vital parts: the graphics card, the central processing units, and the power supply units. The navigation bar will take the user to different pages for their respective components, along with some quality of life filter pages with the components of the database. Further information will be disclosed on the respective pages for ease of convenience, but a brief introduction will be listed below.</p>
+      <hr>
+        <p class= generalizedHeader> Overview: The Pages </p>
+      <hr>
+        <p class="generalizedBody"> The "Graphics Processing Units" will go over the facts of a graphics card while allowing the user to filter between a selection with brand and usage type as the two filters and a chart of their choice for wattage.</p>
+        <p class="generalizedBody"> The "Central Processing Units" will go over the facts of a central processing unit, allowing the user to filter between brand, pricing, and a chart for usage type.  </p>
+        <p class="generalizedBody"> The "Power Supply Units" will go over the facts of a power supply unit, and the user will be able to filter through the selection with rated wattage, their 80 PLUS rating, and a chart for brand names.</p>
+
+<!-- the two pages below will utilize inner join. The first one being of two tables, the second being of all three. -->
+        <p class="generalizedBody"> The "Optimal Combinations" page will go over specifically the best possible combination between a CPU and a GPU. There will only be two filter, which allows the user to select either the cpu or gpu which then would result in a list of cards with best possible combinations for this cpu/gpu. </p>
+        <p class="generalizedBody"> The "Database" will be a page with the entire database at the user's disposal for filtering. As such, there will be quite a wide variety of filter options. </p>
+    </div> 
+  </div>
+
+
+  <div class="fillerContainer">
+
+    <div class="containerRounded" id="containerMargin"> 
+      <h1 class="generalizedHeader"> The GPU </h1>
+      <hr>
+      <p class="generalizedBody"> The graphics processor is the component of the computer that visualizes the software onto the monitor screen. In essence, it serves as the eye of the computer. </p>
+    </div>
+
+  <div class="containerRounded" id="containerMargin"> 
+    <h1 class="generalizedHeader"> The Central Processor </h1>
+    <hr>
+    <p class="generalizedBody"> The central processor is the brain of the computer; it connects every component together to make one cohesive, functioning machine. </p>
+  </div>
+
+  <div class="containerRounded" id="containerMargin"> 
+    <h1 class="generalizedHeader"> The Power Supply </h1>
+    <hr>
+    <p class="generalizedBody"> The power supply, as its name implies, provides electricity to the computer and its components in a safe, efficient manner, depending on its 80Plus rating. </p>
+  </div>
+
+  </div>
+<!-- Overview End -->
+
+  <br>
+  <br>
+  <br>
+
+  <!---------------------------- Footer Start ----------------------------------------------->
+  <div class="footer">
+    <div class="footerCont">
+      <img src="FooterImage/ian.jpg">  <h3>Intel, Amd, Nvidia</h3> 
+    </div>
+    <hr>
+    <div>
+      <h3>Database Project</h3>
+      <br>
+      <a href="index.html"> <p>Home Page</p> </a>
+      <a href="https://www.w3schools.com/"> <p>w3schools</p> </a>
+    </div>
+    <hr>
+    <div>
+      <h3>Bayside Highschool</h3>
+        <br>
+        <p>Made by</p>
+        <p>Alexander Xu</p>
+      </a>
+    </div>
+  </div>
+  <!---------------------------- Footer End ----------------------------------------------->
+  
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="WT.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js"></script>
+  <script src="https://kit.fontawesome.com/6e4058d9a8.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <!---------------------------- Sidebar and Header Start -------------------------->
+  <div class="breakAbsolute"></div>
+  <div id="sideID" class="sideClass">
+    <div class="closebutton" onclick="closeNav()"> <p id="closeIcon">×</p></div>
+    <h1 class = "currentPage"> Database </h1>
+    <a href="index.html">Home Page</a>
+    <a href="GPU.html">Graphic Processing Units</a>
+    <a href="CPU.html">Central Processing Units</a>
+    <a href="PSU.html">Power Supply Units</a>
+    <a href="OC.html">Optimal Combinations</a>
+  </div>
+
+  <div id="containerID">
+    <button class="openbutton" onclick="openNav()">☰ Navigation</button>  
+  </div>
+   <div class="break"></div>
+  <!------------------------ Sidebar and Header End ------------------------------------->
+
+
+
+
+  <!-- Still Image (same class for convenience) -->
+    <div class="slideshowCont">
+
+      <div class="SlidesPG fadeOutIn">
+        <div class="slidesCount">1 / 6</div>
+        <img class="slideshowImg" src="HomepageSlideshow/cpu.jpg" style="width:100%">
+        <div class="captionText">Intel and Ryzen</div>
+      </div>
+
+      <div class="SlidesPG fadeOutIn">
+        <div class="slidesCount">2 / 6</div>
+        <img class="slideshowImg" src="CpuSlideshow/cpupg2.jpg" style="width:100%">
+        <div class="captionText">Intel </div>
+      </div>
+
+      <div class="SlidesPG fadeOutIn">
+        <div class="slidesCount">3 / 6</div>
+        <img class="slideshowImg" src="GpuSlideshow/gpupg9.jpg" style="width:100%">
+        <div class="WhiteBG">A100 Nvidia</div>
+      </div>
+
+      <div class="SlidesPG fadeOutIn">
+        <div class="slidesCount">4 / 6</div>
+        <img class="slideshowImg" src="OCSlideshow/ocpg7.jpg" style="width:100%">
+        <div class="captionText">Ryzen and Radeon</div>
+      </div>
+
+      <div class="SlidesPG fadeOutIn">
+        <div class="slidesCount">5 / 5</div>
+        <img class="slideshowImg" src="PsuSlideshow/psupg2.jpg" style="width:100%">
+        <div class="captionText">Power Supply Units</div>
+      </div>
+
+
+    </div>
+
+  <div class="break">
+    <div style="text-align:center">
+      <span class="dotIndicator"></span> 
+      <span class="dotIndicator"></span> 
+      <span class="dotIndicator"></span> 
+      <span class="dotIndicator"></span> 
+      <span class="dotIndicator"></span> 
+    </div>
+  </div>
+
+<br>
+  <br>
+  <br>
+  <!-- Overview -->
+    <div class="fillerContainer">
+      <div class="containerRounded" id="containerMargin"> 
+        <p class= generalizedHeader> Overview: The Database </p>
+      <hr>
+        <p class="generalizedBody"> This page has combined all the data that can be found in the other pages into one cohesive mass while offering the same filtering options in the other pages.</p>
+      </div>
+    </div>
+  <!-- Overview End -->
+  <br>
+  <br>
+  <br>
+
+  <!--output start -->
+  
+  <div class = "break"></div>
+  <div class="page">
+    <div class="filterSection"> 
+      
+      <div class="searchContainer"> <h3 class="generalizedHeader"> Filter all by Brand </h3> <hr> <p class="generalizedBody"> Instructions: Select a Brand for results. 
+      <hr>
+      <div class="variableContainer">
+        <input type="text" id="brandName" placeholder="Enter a Brand"> 
+        <input type="button" onclick="filterByBrand()" value="Filter">
+      </div>
+      </div>
+
+      <div class="searchContainer"> <h3 class="generalizedHeader"> Filter all by Wattage </h3> <hr> <p class="generalizedBody"> Instructions: Select a Type for results. 
+      <hr>
+      <div class="variableContainer">
+        <select id="Wattage" placeholder="Select a Type"> 
+        <input type="button" onclick="filterByWattage()" value="Filter">
+      </div>
+      </div>
+
+<!-- Charts -->
+      <div class="searchContainer"> <h3 class="generalizedHeader"> Select a Chart style  </h3> <hr> <p class="generalizedBody"> Instructions: Select a chart style to depict how you wish for your data to be visualized. 
+      <hr>
+      <div class="variableContainer">
+          <select id="chartType">
+              <option value="bar">Bar</option>
+              <option value="pie">Pie</option>
+          </select>
+      </div>
+      </div>
+
+      <div class="searchContainer"> <h3 class="generalizedHeader"> Visualize the Wattage of the items. </h3> <hr> <p class="generalizedBody"> Instructions: Click the filter button to visualize the wattage of every item. 
+      <hr>
+      <div class="variableContainer">
+        <input type="button" onclick="filterByWattageChart()" value="Filter">
+      </div>
+      </div>
+
+      <div class="searchContainer"> <h3 class="generalizedHeader"> Visualize the Brands of every item. </h3> <hr> <p class="generalizedBody"> Instructions: Click the filter button to visualize the brand of every item 
+      <hr>
+      <div class="variableContainer">
+        <input type="button" onclick="filterByBrandChart()" value="Filter">
+      </div>
+      </div>
+
+    </div>
+
+
+
+
+
+    <div class="outputSection"> 
+     <div class="results" id="outputNum">  </div>
+     <div class="output" id="output">  </div>
+    </div>
+  </div>
+  <div class = "break"></div>
+  
+<!-- output end -->
+  <!---------------------------- Footer Start ----------------------------------------------->
+  <div class="footer">
+    <div class="footerCont">
+      <img src="FooterImage/ian.jpg">  <h3>Intel, Amd, Nvidia</h3> 
+    </div>
+    <hr>
+    <div>
+      <h3>Database Project</h3>
+      <br>
+      <a href="index.html"> <p>Home Page</p> </a>
+      <a href="https://www.w3schools.com/"> <p>w3schools</p> </a>
+    </div>
+    <hr>
+    <div>
+      <h3>Bayside Highschool</h3>
+        <br>
+        <p>Made by</p>
+        <p>Alexander Xu</p>
+      </a>
+    </div>
+  </div>
+  <!---------------------------- Footer End ----------------------------------------------->
+
+  <script src="script.js"></script>
+</body>
+
+</html>

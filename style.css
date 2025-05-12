@@ -1,0 +1,348 @@
+/* Color Scheme
+
+Primary: #00AEEF (Electric Blue)
+Secondary: #7D7D7D (Medium Gray)
+Accent: #FF4500 (Orange)
+Background: #F7F7F7 (Light Gray)
+Text: #2C2C2C (Dark Gray) 
+
+*/
+
+
+/*--------------------------- Preliminary Configurations Start ---------------------------*/
+html {
+  height: 100%;
+  width: 100%;
+  background-color: #F7F7F7;
+}
+body{
+  margin: 0;
+}
+
+.generalizedHeader{display:flex;
+  justify-content:center;
+  font-size: 50px;
+  color: #2C2C2C;
+}
+
+.generalizedBody{
+  font-size: 25px;
+  color: #2C2C2C;
+}
+
+.generalizedHeader{display:flex;
+  justify-content:center;
+  font-size: 30px;
+  color: #2C2C2C;
+}
+/*-------------------------- Preliminary Configurations End --------------------------------*/
+
+
+
+
+/*------------------------- Breaks/Separation Tools Start ----------------------------------*/
+
+.breakAbsolute{
+  position: absolute;
+  Width: 100%;
+  background-color: #00AEEF;
+  padding: 35px;
+  z-index: 1;
+}
+
+.break{
+  Width: 100%;
+  background-color: #00AEEF;
+  padding: 25px;
+  z-index: 1;
+}
+/*------------------------- Breaks/Separation Tools End ----------------------------------*/
+
+
+
+
+/*--------------------------- Sidebar Start -----------------------------------------------*/
+.sideClass {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: #00AEEF;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sideClass a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #515151;
+  display: block;
+  transition: 0.3s;
+}
+
+.sideClass a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.sideClass .closebutton {
+  position: absolute;
+  top: -19px;
+  left: -20px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbutton {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #00AEEF;
+  color: #2C2C2C ;
+  padding: 10px 15px;
+  border: none;
+  transition: .5s;
+  z-index: 2;
+  position: fixed;
+}
+
+.openbutton:hover {
+  background-color: #008cc1;
+}
+
+#containerID {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+#closeIcon{
+  color: #2C2C2C ;
+}
+
+.currentPage{
+  text-align: center;
+}
+/*----------------------------------- Sidebar End ----------------------------------*/
+
+
+
+
+
+/*----------------------------------- Footer Start ---------------------------------*/
+
+.floatLeft{
+  display:flex;
+  float: left;
+  text-align: center;
+}
+.footer{
+  display:flex;
+  flex-direction:row;
+  background-color: #00AEEF;
+}
+.footer div{
+  flex:1;
+  text-align:center;
+  color: white;
+  font-family: "Arial Black";
+}
+.footer h3{
+  font-size: 25px;
+  color: #000000;
+}
+
+
+
+
+.footer p {
+  font-size: 15px;
+  transition: 0.2s;
+  color: #515151;
+}
+.footer .footerCont{
+  margin-top: 20px;
+}
+.footer .footerCont img{
+  height: 50%;
+  width: 25%;
+}
+
+
+.footer  a{
+  text-decoration: none;
+  color: white;
+}
+.footer p:hover{
+  color: #000000;
+}
+
+/*----------------------------------------------- Footer End -----------------------------*/
+
+/* Slideshow Setup */
+
+* { box-sizing: border-box; }
+.SlidesPG { display: none; }
+.slideshowImg { vertical-align: middle; }
+
+.slideshowCont {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.captionText {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.WhiteBG{
+  color: #000000;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.slidesCount {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dotIndicator {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.activeBackground {
+  background-color: #717171;
+}
+
+.fadeOutIn {
+  animation-name: fade;
+  animation-duration: 0.5s;
+}
+
+@keyframes fade {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
+}
+/* Slideshow Setup End */
+
+
+/* Overview start */
+.fillerContainer{display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#F7F7F7;
+  padding: 20px;
+  }
+
+#containerMargin{
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.containerRounded{
+  width:1300px;
+  height: auto;
+  border-radius: 25px;
+  border: 2px solid #00AEEF;
+  padding: 20px;
+  background:  #00AEEF;
+}
+/* Overview End */
+
+/* Filter Configurations*/
+.page{
+  display: flex;
+  background-color:#00AEEF;
+}
+
+.filterSection{display:flex;
+  padding-left:20px;
+  padding-right: 20px;
+  flex: 1;
+  flex-direction: column;
+}
+
+.outputSection{display:flex;
+  flex:2;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color:#F7F7F7;
+  margin-right: 20px;
+}
+
+.searchContainer{
+  margin-bottom: 20px;
+  border-radius: 2px;
+  border: 2px solid black;
+  padding: 20px;
+  background:  #F7F7F7;
+}
+
+.outputSection{
+  border-radius: 2px;
+  border: 2px solid black;
+  padding:20px;
+}
+
+.variableContainer{
+  margin-top: 20px;
+  display:flex;
+  justify-content: center;
+  text-align:center;
+}
+
+#outputNum{
+  font-size: 50px;
+  color: #2C2C2C;
+}
+
+.containerRoundedOutput{
+  border-radius: 25px;
+  border: 2px solid #00AEEF;
+  background:  #00AEEF;
+  max-width:200px;
+  min-width:200px;
+  padding:10px;
+  text-align: center;
+  margin: 5px;
+  margin-left: 13px;
+}
+.results{
+  justify-content: center;
+  text-align: center;
+}
+.outputSection{
+  display: flex;
+  flex-direction: column;
+}
+.output{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filterImg{
+  max-width: 150px;
+  max-height: 150px;
+  object-fit: scale-down;
+}

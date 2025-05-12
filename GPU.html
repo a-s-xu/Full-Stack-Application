@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="GPU.js"></script>
+  <script src="https://kit.fontawesome.com/6e4058d9a8.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js"></script>
+  <script src="https://kit.fontawesome.com/6e4058d9a8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!---------------------------- Sidebar and Header Start -------------------------->
+  <div class="breakAbsolute"></div>
+  <div id="sideID" class="sideClass">
+    <div class="closebutton" onclick="closeNav()"> <p id="closeIcon">×</p></div>
+    <h1 class = "currentPage"> Graphics Processing Units </h1>
+    <a href="index.html">Home Page</a>
+    <a href="CPU.html">Central Processing Units</a>
+    <a href="PSU.html">Power Supply Units</a>
+    <a href="OC.html">Optimal Combinations</a>
+    <a href="WT.html">Database</a>
+  </div>
+
+  <div id="containerID">
+    <button class="openbutton" onclick="openNav()">☰ Navigation</button>  
+  </div>
+   <div class="break"></div>
+  <!------------------------ Sidebar and Header End ------------------------------------->
+
+
+
+
+
+  <!-- Slideshow -->
+    <div class="slideshowCont">
+
+      <div class="SlidesPG fadeOutIn">
+        <div class="slidesCount">1 / 3</div>
+        <img class="slideshowImg" src="GpuSlideshow/gpupg6.jpg" style="width:100%">
+        <div class="WhiteBG">Nvidia</div>
+      </div>
+
+      <div class="SlidesPG fadeOutIn">
+        <div class="slidesCount">2 / 3</div>
+        <img class="slideshowImg" src="GpuSlideshow/gpupg9.jpg" style="width:100%">
+        <div class="WhiteBG"> A100 Nvidia</div>
+      </div>
+
+      <div class="SlidesPG fadeOutIn">
+        <div class="slidesCount">3 / 3</div>
+        <img class="slideshowImg" src="GpuSlideshow/gpupg3.jpg" style="width:100%">
+        <div class="captionText">AMD Radeon</div>
+      </div>
+
+    </div>
+
+  <div class="break">
+    <div style="text-align:center">
+      <span class="dotIndicator"></span> 
+      <span class="dotIndicator"></span> 
+      <span class="dotIndicator"></span> 
+    </div>
+  </div>
+<!-- Slideshow End -->
+
+  <br>
+  <br>
+  <br>
+  <!-- Overview -->
+    <div class="fillerContainer">
+      <div class="containerRounded" id="containerMargin"> 
+        <p class= generalizedHeader> Overview: The Graphics Processing Unit </p>
+      <hr>
+        <p class="generalizedBody"> The Graphics Processing Unit displays imagery on the monitor screen in the simplest terms. A user may find themselves requiring a stronger GPU depending on their usage; if the user plays extensive games or does a lot of rendering, they might find themselves requiring a higher-end model. Inversely, if the user exclusively uses a computer for web browsing or other documenting work, they might find themselves perfectly content with a lesser-end GPU or none at all, with just the CPU alone being able to carry their workload.</p>
+        <hr>
+        <p class="generalizedBody"> To filter below the options, type the brand of interest, or select the gpu type of interest. Alternatively you can visualize the wattage range.</p>
+      </div>
+    </div>
+<!-- Overview End -->
+<br>
+<br>
+<br>
+
+  <!-- Output -->
+  <div class = "break"></div>
+  <div class="page">
+    <div class="filterSection"> 
+      <div class="searchContainer"> <h3 class="generalizedHeader"> Filter GPU's by Brand </h3> <hr> <p class="generalizedBody"> Instructions: Select a Brand for results. 
+      <hr>
+      <div class="variableContainer">
+        <input type="text" id="brandName" placeholder="Enter a Brand"> 
+        <input type="button" onclick="filterByBrand()" value="Filter">
+      </div>
+      </div>
+
+
+
+      <div class="searchContainer"> <h3 class="generalizedHeader"> Filter GPU's by Type </h3> <hr> <p class="generalizedBody"> Instructions: Select a Type for results. 
+      <hr>
+      <div class="variableContainer">
+        <select id="gpuType" placeholder="Select a Type"> 
+        <input type="button" onclick="filterByType()" value="Filter">
+      </div>
+      </div>
+
+
+      <div class="searchContainer"> <h3 class="generalizedHeader"> Select a Chart style  </h3> <hr> <p class="generalizedBody"> Instructions: Select a chart style to depict how you wish for your data to be visualized. 
+      <hr>
+      <div class="variableContainer">
+          <select id="chartType">
+              <option value="bar">Bar</option>
+              <option value="pie">Pie</option>
+          </select>
+      </div>
+      </div>
+
+      <div class="searchContainer"> <h3 class="generalizedHeader"> Visualize the Wattage of GPU's </h3> <hr> <p class="generalizedBody"> Instructions: Click the filter button to visualize the wattage of every Gpu. 
+      <hr>
+      <div class="variableContainer">
+        <input type="button" onclick="filterByWattage()" value="Filter">
+      </div>
+      </div>
+
+    </div>
+
+
+
+
+
+    <div class="outputSection"> 
+     <div class="results" id="outputNum">  </div>
+     <div class="output" id="output">  </div>
+    </div>
+  </div>
+  <div class = "break"></div>
+  <!---------------------------- Footer Start ----------------------------------------------->
+  <div class="footer">
+    <div class="footerCont">
+      <img src="FooterImage/ian.jpg">  <h3>Intel, Amd, Nvidia</h3> 
+    </div>
+    <hr>
+    <div>
+      <h3>Database Project</h3>
+      <br>
+      <a href="index.html"> <p>Home Page</p> </a>
+      <a href="https://www.w3schools.com/"> <p>w3schools</p> </a>
+    </div>
+    <hr>
+    <div>
+      <h3>Bayside Highschool</h3>
+        <br>
+        <p>Made by</p>
+        <p>Alexander Xu</p>
+      </a>
+    </div>
+  </div>
+  <!---------------------------- Footer End ----------------------------------------------->
+
+  <script src="script.js"></script>
+</body>
+
+</html>
